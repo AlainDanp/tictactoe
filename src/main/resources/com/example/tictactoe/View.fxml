@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="585.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tictactoe.Controller">
+  <children>
+    <FlowPane layoutX="182.0" layoutY="115.0" prefHeight="225.0" prefWidth="264.0">
+      <children>
+        <Button fx:id="button1" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" styleClass="buttonstyle" textFill="WHITE">
+               <font>
+                  <Font size="29.0" />
+               </font>
+               <FlowPane.margin>
+                  <Insets right="5.0" />
+               </FlowPane.margin></Button>
+        <Button fx:id="button2" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" styleClass="buttonstyle" textFill="WHITE">
+               <font>
+                  <Font size="29.0" />
+               </font></Button>
+        <Button fx:id="button3" layoutX="85.0" layoutY="10.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" styleClass="buttonstyle" textFill="WHITE">
+               <font>
+                  <Font size="29.0" />
+               </font>
+               <FlowPane.margin>
+                  <Insets left="5.0" />
+               </FlowPane.margin></Button>
+        <Button fx:id="button4" layoutX="160.0" layoutY="10.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" styleClass="buttonstyle" textFill="WHITE">
+               <font>
+                  <Font size="29.0" />
+               </font>
+               <FlowPane.margin>
+                  <Insets right="5.0" top="5.0" />
+               </FlowPane.margin></Button>
+        <Button fx:id="button5" layoutX="10.0" layoutY="85.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" styleClass="buttonstyle" textFill="WHITE">
+               <font>
+                  <Font size="29.0" />
+               </font>
+               <FlowPane.margin>
+                  <Insets top="5.0" />
+               </FlowPane.margin></Button>
+        <Button fx:id="button6" layoutX="85.0" layoutY="85.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" styleClass="buttonstyle" textFill="WHITE">
+               <font>
+                  <Font size="29.0" />
+               </font>
+               <FlowPane.margin>
+                  <Insets left="5.0" top="5.0" />
+               </FlowPane.margin></Button>
+        <Button fx:id="button7" layoutX="160.0" layoutY="85.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" styleClass="buttonstyle" textFill="WHITE">
+               <font>
+                  <Font size="29.0" />
+               </font>
+               <FlowPane.margin>
+                  <Insets right="5.0" top="5.0" />
+               </FlowPane.margin></Button>
+        <Button fx:id="button8" layoutX="10.0" layoutY="160.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" styleClass="buttonstyle" textFill="WHITE">
+               <font>
+                  <Font size="29.0" />
+               </font>
+               <FlowPane.margin>
+                  <Insets top="5.0" />
+               </FlowPane.margin></Button>
+        <Button fx:id="button9" layoutX="85.0" layoutY="160.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" styleClass="buttonstyle" textFill="WHITE">
+               <font>
+                  <Font size="29.0" />
+               </font>
+               <FlowPane.margin>
+                  <Insets left="5.0" top="5.0" />
+               </FlowPane.margin></Button>
+      </children>
+    </FlowPane>
+    <Text fx:id="winnerText" layoutX="182.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tic-Tac-Toe" textAlignment="CENTER" wrappingWidth="237.9443359375">
+      <font>
+        <Font name="Roboto Light" size="38.0" />
+      </font>
+    </Text>
+    <Button layoutX="274.0" layoutY="361.0" mnemonicParsing="false" onAction="#restartGame" text="Restart" />
+      <HBox layoutX="14.0" layoutY="14.0" spacing="20">
+          <children>
+              <VBox>
+                  <Label text="Joueur X :  ">
+                  <font>
+                     <Font name="Roboto Light" size="12.0" />
+                  </font></Label>
+                  <Text fx:id="playerXScore" />
+              </VBox>
+              <VBox>
+                  <Label text="Joueur O : ">
+                  <font>
+                     <Font name="Roboto Light" size="12.0" />
+                  </font></Label>
+                  <Text fx:id="playerOScore" />
+              </VBox>
+          </children>
+      </HBox>
+      <Button layoutX="33.0" layoutY="60.0" mnemonicParsing="false" onAction="#resetScores" text="Reset Scores" />
+  </children>
+
+</AnchorPane>
