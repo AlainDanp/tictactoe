@@ -56,6 +56,8 @@ public class Controller implements Initializable {
     private int playerOWins = 0;
 
     private MediaPlayer mediaPlayer;
+    private MediaPlayer mediabouton;
+    private MediaPlayer mediabouton2;
 
     ArrayList<Button> buttons;
 
@@ -86,6 +88,16 @@ public class Controller implements Initializable {
         playerOScore.setText("0");
     }
 
+    @FXML
+    void stop(ActionEvent event){
+        mediaPlayer.stop();
+    }
+    @FXML
+    void play(ActionEvent event){
+        mediaPlayer.play();
+        mediaPlayer.setCycleCount(MediaPlayer.INDEFINITE);
+    }
+
     public void resetButton(Button button){
         button.setDisable(false);
         button.setText("");
@@ -98,18 +110,21 @@ public class Controller implements Initializable {
             checkIfGameIsOver();
         });
     }
-    public void stopM() {
-        // Arrêter la musique
-        mediaPlayer.stop();
-    }
+
 
     public void setPlayerSymbol(Button button){
+        Media sound1 = new Media(getClass().getResource("Bruh.mp3").toString());
+        Media sound2 = new Media(getClass().getResource("Punch.mp3").toString());
+        mediabouton = new MediaPlayer(sound1);
+        mediabouton2 = new MediaPlayer(sound2);
         if(playerTurn % 2 == 0){
             button.setText("X");
             playerTurn = 1;
+            mediabouton.play();
         } else{
             button.setText("O");
             playerTurn = 0;
+            mediabouton2.play();
         }
     }
 

@@ -2,6 +2,7 @@
 
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
@@ -96,6 +97,22 @@
           </children>
       </HBox>
       <Button layoutX="33.0" layoutY="60.0" mnemonicParsing="false" onAction="#resetScores" text="Reset Scores" />
+      <Button layoutX="506.0" layoutY="361.0" mnemonicParsing="false" onAction="#stop">
+          <graphic>
+              <ImageView fitHeight="16" fitWidth="16" preserveRatio="true">
+                  <Image url="@stop.png" />
+              </ImageView>
+          </graphic>
+      </Button>
+
+      <Button layoutX="506.0" layoutY="325.0" mnemonicParsing="false" onAction="#play">
+          <graphic>
+              <ImageView fitHeight="16" fitWidth="16" preserveRatio="true">
+                  <Image url="@play.png" />
+              </ImageView>
+          </graphic>
+      </Button>
+
   </children>
 
 </AnchorPane>
